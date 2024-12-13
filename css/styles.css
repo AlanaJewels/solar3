@@ -1,0 +1,266 @@
+@charset "UTF-8";
+/* CSS RESET BY MYE WEB */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* Define New Color Scheme */
+:root {
+    --primary-bg-color: #f8f9fa;        /* Light background */
+    --primary-text-color: #4b0082;       /* Deep Purple Text */
+    --primary-border-color: #d3d3d3;     /* Light Gray Border */
+    --highlight-color: #ff6347;           /* Tomato Red Highlights */
+    --button-bg-color: #4b0082;           /* Purple Button */
+    --button-bg-hover: #6a0dad;           /* Darker Purple Button Hover */
+    --panel-bg-color: #f0f4f8;            /* Light grayish panel background */
+    --feedback-bg-color: #ffffff;         /* White Feedback Box */
+    --secondary-text-color: #228b22;      /* Forest Green for Secondary Text */
+}
+
+/* General Styles */
+html {
+  -webkit-text-size-adjust: none; 
+}
+
+/* Reset and Layout Box Model */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    line-height: 1;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; /* Loaded 300 and 700 */
+    line-height: 1.5;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    border-top: 40px solid var(--primary-text-color);  /* Deep Purple Border */
+    background-image: url(../images/sun.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header h1 {
+    color: #ffffff;  /* White text */
+    font-size: 3rem;
+    padding: .5rem 0 .5rem 60px;
+}
+
+/* Navigation */
+header, nav, main, footer {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: var(--primary-text-color);  /* Purple Background */
+}
+
+nav li {
+    float: left;
+    width: 25%;
+}
+
+nav li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: .5rem 0;
+    width: 100%;
+    text-align: center;
+    border-right: 1px solid var(--primary-border-color);
+}
+
+nav li.active a {
+    background-color: var(--highlight-color);  /* Tomato Red on Active */
+}
+
+/* Main Section */
+main {
+    padding: .3rem 2%;
+}
+
+main h1 {
+    color: var(--primary-text-color);   /* Purple Main Heading */
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+main h2 {
+    color: var(--highlight-color);       /* Tomato Red for Sub-headings */
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+main p {
+    line-height: 125%;
+    padding-bottom: .25rem;
+}
+
+main fieldset {
+    border: 1px solid var(--primary-border-color);  /* Light gray border */
+    border-radius: 10px;
+    padding: .5rem 2%;
+    margin-top: 1rem;
+    background-color: var(--panel-bg-color);         /* Light gray background */
+}
+
+main fieldset legend {
+    color: var(--primary-text-color);    /* Deep Purple Legend */
+    font-weight: 700;
+}
+
+/* Form Styling */
+main form label {
+    display: block;
+    padding: .4rem 0;
+    font-size: .75rem;
+}
+
+main form span {
+    display: block;
+    font-size: .7rem;
+    color: var(--secondary-text-color); /* Green Secondary Text */
+}
+
+main form input,
+main form select {
+    width: 100%;
+    font-size: .95rem;
+    border: 1px solid #d3d3d3;  /* Light Gray Border */
+    border-radius: 5px;
+    padding: .5rem;
+    background-color: #ffffff; /* White Background for Inputs */
+}
+
+main form select {
+    background-color: var(--panel-bg-color);  /* Light Gray Select */
+}
+
+main button {
+    width: 240px;
+    border: none;
+    padding: .8rem;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    background: var(--button-bg-color);
+    background: linear-gradient(to bottom, var(--button-bg-color) 1%, var(--button-bg-hover) 100%);
+}
+
+main button:hover {
+    background: linear-gradient(to bottom, var(--button-bg-hover) 1%, var(--button-bg-color) 100%);
+}
+
+/* Feedback Section */
+#feedback {
+    background-color: var(--feedback-bg-color);  /* White Background for Feedback */
+    border: 1px solid var(--primary-border-color);  /* Light Gray Border */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#feedback p {
+    font-size: 16px;
+    color: var(--primary-text-color); /* Purple Text for Feedback */
+}
+
+#feedback h2 {
+    font-size: 20px;
+    color: var(--highlight-color); /* Tomato Red for Feedback Heading */
+}
+
+/* Select Dropdown */
+select[name="panel"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+select[name="panel"]:hover {
+    background-color: #ffe4e1; /* Light Red Hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: var(--primary-text-color);   /* Purple Footer */
+    color: #fff;
+    font-size: .75rem;
+    padding: 1rem 0;
+}
+
+/* Clearfix for floated elements */
+.keepOpen {
+    clear: both;
+}
+
+/* Image Responsiveness */
+main figure img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 30em) {
+    main figure {
+        width: 70%;
+        float: right;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
